@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Komdham.com — আপনার ব্যবসা, আমাদের ডিজিটাল সমাধান">
+<title>Komdham.com | আপনার ব্যবসা, আমাদের ডিজিটাল সমাধান</title>
+<style>
+:root{--green:#0fc66b;--dark:#09263b;--muted:#536474;--light:#f5faf8;--line:#e5eee9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans Bengali","Hind Siliguri",system-ui,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #edf1ef}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:25px}.brand .cart{font-size:32px;color:var(--green)}.brand span{color:var(--green)}.tagline{display:block;font-size:11px;color:#71808c;font-weight:500;margin-top:-5px}
+nav{display:flex;gap:28px;font-size:14px;font-weight:700}nav a:hover,nav a.active{color:var(--green)}
+.actions{display:flex;gap:17px;font-size:22px}.hamb{display:none;font-size:26px}
+.hero{min-height:480px;background:linear-gradient(90deg,rgba(3,25,35,.9),rgba(3,25,35,.55),rgba(3,25,35,.15)),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center;color:#fff}
+.hero-content{max-width:650px;padding:75px 0}.pill{display:inline-block;background:var(--green);padding:6px 17px;border-radius:30px;font-weight:800;font-size:13px}.hero h1{font-size:clamp(38px,5vw,66px);line-height:1.12;margin:16px 0 12px}.hero h1 b{color:var(--green)}.hero p{font-size:18px;max-width:590px}.btns{display:flex;gap:14px;margin-top:25px;flex-wrap:wrap}.btn{padding:12px 22px;border-radius:28px;font-weight:800;border:1px solid transparent;display:inline-block}.primary{background:var(--green);color:#fff}.outline{border-color:#fff;color:#fff}.primary:hover{filter:brightness(.94)}
+.section{padding:55px 0}.center{text-align:center}.section-title{font-size:32px;margin:0 0 8px}.under{width:50px;height:4px;background:var(--green);border-radius:5px;margin:0 auto 30px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature{padding:18px;text-align:center;border-right:1px solid var(--line)}.icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;font-size:28px;background:#e7faf1}.feature h3{margin:5px 0;font-size:18px}.feature p{color:var(--muted);font-size:14px;margin:0}
+.products{background:var(--light)}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.04)}.card .pic{height:140px;background-size:cover;background-position:center}.card:nth-child(1) .pic{background-image:url("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80")}.card:nth-child(2) .pic{background-image:url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80")}.card:nth-child(3) .pic{background-image:url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80")}.card:nth-child(4) .pic{background-image:url("https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80")}.card:nth-child(5) .pic{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80")}.card-body{padding:15px;text-align:center}.card h3{margin:0 0 5px}.card p{font-size:13px;color:var(--muted);min-height:44px}.small-btn{display:inline-block;border:1px solid var(--green);color:#079b53;padding:6px 13px;border-radius:20px;font-size:12px;font-weight:800}
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:0;background:#edf9f4}.about-img{min-height:360px;background:url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85") center/cover}.about-copy{padding:50px}.stats{display:flex;gap:28px;margin-top:25px}.stat strong{display:block;font-size:27px;color:#08a95c}.stat span{font-size:13px;color:var(--muted)}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.quote{border:1px solid var(--line);padding:22px;border-radius:10px;box-shadow:0 5px 18px rgba(0,0,0,.04)}.person{display:flex;align-items:center;gap:12px}.avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#e8f7ef;font-size:23px}.stars{color:#ffb400;letter-spacing:2px}.quote p{font-size:14px;color:var(--muted)}
+.contact{background:#09263b;color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{padding:15px 0}.contact-form{display:grid;gap:12px}.contact-form input,.contact-form textarea{width:100%;padding:13px;border:0;border-radius:8px;font:inherit}.contact-form textarea{min-height:120px;resize:vertical}
+footer{background:#061b2a;color:#d8e4ea;padding:35px 0 15px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:30px}.footer-title{color:#fff;font-weight:800;margin-bottom:10px}.footer-grid a{display:block;font-size:14px;margin:6px 0;color:#c6d5dc}.copyright{border-top:1px solid #294050;margin-top:25px;padding-top:14px;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:900px){nav,.actions{display:none}.hamb{display:block}.features{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.about,.contact-grid{grid-template-columns:1fr}.about-img{min-height:260px}.testimonials{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.nav{height:62px}.brand{font-size:20px}.brand .cart{font-size:27px}.hero{min-height:520px}.hero-content{padding:55px 0}.hero h1{font-size:40px}.section{padding:42px 0}.section-title{font-size:27px}.features,.grid,.footer-grid{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid var(--line)}.about-copy{padding:32px 20px}.stats{gap:18px;flex-wrap:wrap}.copyright{display:block}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="cart">🛒</span><div>komdham<span>.com</span><small class="tagline">আপনার ব্যবসা, আমাদের ডিজিটাল সমাধান</small></div></a>
+    <nav>
+      <a class="active" href="#home">হোম</a><a href="#products">আমাদের পণ্য</a><a href="#services">আমাদের সেবা</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ</a>
+    </nav>
+    <div class="actions"><span>⌕</span><span>♙</span><span>🛒</span></div>
+    <div class="hamb">☰</div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container"><div class="hero-content">
+    <span class="pill">komdham.com</span>
+    <h1>আপনার ব্যবসাকে নিয়ে যান<br><b>আরও এক ধাপ সামনে</b></h1>
+    <p>Komdham.com — বিশ্বস্ততা, মান এবং আধুনিক সেবার এক ঠিকানা।</p>
+    <div class="btns"><a class="btn primary" href="#products">🛒 আমাদের পণ্য দেখুন</a><a class="btn outline" href="#contact">➤ যোগাযোগ করুন</a></div>
+  </div></div>
+</section>
+
+<section class="section" id="services"><div class="container center">
+  <h2 class="section-title">কেন Komdham.com?</h2><div class="under"></div>
+  <div class="features">
+    <div class="feature"><div class="icon">🛡️</div><h3>মানসম্মত পণ্য ও সেবা</h3><p>আমরা দেই সেরা মানের পণ্য ও বিশ্বস্ত সেবা।</p></div>
+    <div class="feature"><div class="icon">🚚</div><h3>দ্রুত ও নির্ভরযোগ্য সাপোর্ট</h3><p>আপনার যেকোনো প্রয়োজনে আমরা আছি পাশে।</p></div>
+    <div class="feature"><div class="icon">📱</div><h3>সহজ অনলাইন যোগাযোগ</h3><p>মাত্র কয়েক ক্লিকে অর্ডার করুন ও যোগাযোগ করুন।</p></div>
+    <div class="feature"><div class="icon">👥</div><h3>গ্রাহকের সন্তুষ্টিই আমাদের লক্ষ্য</h3><p>আপনার সন্তুষ্টিই আমাদের সাফল্যের মূল চাবিকাঠি।</p></div>
+  </div>
+</div></section>
+
+<section class="section products" id="products"><div class="container center">
+  <h2 class="section-title">আমাদের পণ্য ও সেবা</h2><div class="under"></div>
+  <p style="color:#61717d">আপনার প্রয়োজন অনুযায়ী আমাদের নির্দিষ্ট বিভিন্ন ধরনের পণ্য ও সেবা।</p>
+  <div class="grid" style="margin-top:25px">
+    <div class="card"><div class="pic"></div><div class="card-body"><h3>ইলেকট্রনিক্স পণ্য</h3><p>ল্যাপটপ, মোবাইল, অ্যাক্সেসরিজ এবং আরও অনেক কিছু।</p><a class="small-btn" href="#contact">বিস্তারিত দেখুন →</a></div></div>
+    <div class="card"><div class="pic"></div><div class="card-body"><h3>পোশাক ও ফ্যাশন</h3><p>পুরুষ, মহিলা ও শিশুদের জন্য সর্বাধুনিক ফ্যাশন।</p><a class="small-btn" href="#contact">বিস্তারিত দেখুন →</a></div></div>
+    <div class="card"><div class="pic"></div><div class="card-body"><h3>হোম & কিচেন</h3><p>ঘর সাজাতে প্রয়োজনীয় এক্সেসরিজ।</p><a class="small-btn" href="#contact">বিস্তারিত দেখুন →</a></div></div>
+    <div class="card"><div class="pic"></div><div class="card-body"><h3>বিউটি & পার্সোনাল কেয়ার</h3><p>আপনার সৌন্দর্য ও যত্নের সেরা সামগ্রী।</p><a class="small-btn" href="#contact">বিস্তারিত দেখুন →</a></div></div>
+    <div class="card"><div class="pic"></div><div class="card-body"><h3>ডিজিটাল সেবা</h3><p>ওয়েব ডিজাইন, গ্রাফিক্স, ডিজিটাল মার্কেটিং এবং আরও অনেক কিছু।</p><a class="small-btn" href="#contact">বিস্তারিত দেখুন →</a></div></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="about-img"></div><div class="about-copy">
+  <h2 class="section-title">আমাদের সম্পর্কে</h2><div class="under" style="margin-left:0"></div>
+  <p>Komdham.com একটি আধুনিক অনলাইন প্ল্যাটফর্ম, যেখানে আপনি পাবেন মানসম্মত পণ্য ও নির্ভরযোগ্য সেবা। আমরা বিশ্বাস করি, সঠিক পণ্য, সঠিক সাপোর্ট এবং দ্রুত সেবা গ্রাহকের সন্তুষ্টি নিশ্চিত করে।</p>
+  <div class="stats"><div class="stat"><strong>10K+</strong><span>সন্তুষ্ট গ্রাহক</span></div><div class="stat"><strong>500+</strong><span>পণ্য ও সেবা</span></div><div class="stat"><strong>4.8/5</strong><span>গ্রাহক রেটিং</span></div></div>
+</div></section>
+
+<section class="section"><div class="container center"><h2 class="section-title">আমাদের গ্রাহকদের মতামত</h2><div class="under"></div>
+  <div class="testimonials">
+    <div class="quote"><div class="person"><div class="avatar">👨</div><div><b>রাকিব হাসান</b><br><small>ঢাকা, বাংলাদেশ</small></div></div><p>“Komdham.com থেকে প্রোডাক্ট অর্ডার করেছিলাম। পণ্য খুব ভালো ছিল এবং ডেলিভারিও সময়মতো পেয়েছি।”</p><div class="stars">★★★★★</div></div>
+    <div class="quote"><div class="person"><div class="avatar">👩</div><div><b>ফারহানা আক্তার</b><br><small>চট্টগ্রাম, বাংলাদেশ</small></div></div><p>“সাইটটি ব্যবহার করা খুবই সহজ। পণ্য এবং সাপোর্ট দুটোই দারুণ।”</p><div class="stars">★★★★★</div></div>
+    <div class="quote"><div class="person"><div class="avatar">👨</div><div><b>মেহেদী হাসান</b><br><small>রাজশাহী, বাংলাদেশ</small></div></div><p>“দাম, মান এবং সার্ভিস—সবকিছু মিলিয়ে Komdham.com আমার পছন্দের প্ল্যাটফর্ম।”</p><div class="stars">★★★★★</div></div>
+  </div>
+</div></section>
+
+<section class="section contact" id="contact"><div class="container contact-grid">
+  <div><h2 class="section-title">যোগাযোগ করুন</h2><p>আপনার প্রয়োজন বা প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন।</p><div class="contact-card">📞 +880 1712 345678</div><div class="contact-card">✉️ info@komdham.com</div><div class="contact-card">📍 ঢাকা, বাংলাদেশ</div></div>
+  <form class="contact-form" onsubmit="sendMessage(event)"><input required placeholder="আপনার নাম"><input type="email" required placeholder="আপনার ইমেইল"><textarea required placeholder="আপনার বার্তা"></textarea><button class="btn primary" type="submit">বার্তা পাঠান</button></form>
+</div></section>
+
+<footer><div class="container"><div class="footer-grid">
+  <div><div class="brand">🛒 <div>komdham<span>.com</span><small class="tagline">আপনার ব্যবসা, আমাদের ডিজিটাল সমাধান</small></div></div></div>
+  <div><div class="footer-title">দ্রুত লিংক</div><a href="#home">হোম</a><a href="#products">আমাদের পণ্য</a><a href="#services">আমাদের সেবা</a><a href="#about">আমাদের সম্পর্কে</a></div>
+  <div><div class="footer-title">যোগাযোগ</div><a href="tel:+8801712345678">+880 1712 345678</a><a href="mailto:info@komdham.com">info@komdham.com</a><a href="#contact">ঢাকা, বাংলাদেশ</a></div>
+  <div><div class="footer-title">সাবস্ক্রাইব করুন</div><p style="font-size:13px">সর্বশেষ আপডেট পেতে আপনার ইমেইল দিন।</p><input id="subscribe" style="padding:11px;width:100%;border-radius:8px;border:0" placeholder="আপনার ইমেইল"></div>
+</div><div class="copyright"><span>© 2026 komdham.com | সর্বস্বত্ব সংরক্ষিত</span><span>গোপনীয়তা নীতি · শর্তাবলী · সহায়তা</span></div></div></footer>
+
+<script>
+function sendMessage(e){e.preventDefault();alert("ধন্যবাদ! আপনার বার্তা গ্রহণ করা হয়েছে।");e.target.reset();}
+</script>
+</body>
+</html>
